@@ -1,0 +1,270 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "hello candy",
+            "modelConfiguration": {
+                "fallbackIntentSensitivity": {
+                    "level": "LOW"
+                }
+            },
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NoIntent",
+                    "samples": []
+                },
+                {
+                    "name": "GotoChannelIntent",
+                    "slots": [
+                        {
+                            "name": "channelNumber",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "channelName",
+                            "type": "AMAZON.TelevisionChannel"
+                        }
+                    ],
+                    "samples": [
+                        "watch channel {channelName}",
+                        "watch channel {channelNumber}",
+                        "watch {channelName}",
+                        "go to channel {channelName}",
+                        "go to channel {channelNumber}",
+                        "go to {channelNumber}",
+                        "go to {channelName}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "OpenApplicationIntent",
+                    "slots": [
+                        {
+                            "name": "appName",
+                            "type": "AMAZON.SoftwareApplication"
+                        }
+                    ],
+                    "samples": [
+                        "open {appName} please",
+                        "please open {appName}",
+                        "open {appName}"
+                    ]
+                },
+                {
+                    "name": "TurnOnOffDeviceIntent",
+                    "slots": [
+                        {
+                            "name": "stbAction",
+                            "type": "STBAction"
+                        }
+                    ],
+                    "samples": [
+                        "please  {stbAction} the device",
+                        "please  {stbAction} device",
+                        " {stbAction} the device",
+                        " {stbAction} the device please",
+                        " {stbAction} device please",
+                        "turn {stbAction} device"
+                    ]
+                },
+                {
+                    "name": "TurnOnOffTVScreenIntent",
+                    "slots": [
+                        {
+                            "name": "tvStatus",
+                            "type": "STBAction"
+                        }
+                    ],
+                    "samples": [
+                        "turn {tvStatus} the TV",
+                        "turn {tvStatus} screen",
+                        "turn {tvStatus} the screen",
+                        "please turn {tvStatus} TV",
+                        "turn {tvStatus} TV",
+                        "turn on the TV screen please",
+                        "turn on TV screen please",
+                        "please turn on the TV screen",
+                        "please turn on TV Screen",
+                        "turn on TV screen",
+                        "turn on the TV screen"
+                    ]
+                },
+                {
+                    "name": "VolumeIntent",
+                    "slots": [
+                        {
+                            "name": "volumeAction",
+                            "type": "volumeAction"
+                        }
+                    ],
+                    "samples": [
+                        "{volumeAction} please",
+                        "{volumeAction} device",
+                        "please {volumeAction}",
+                        "{volumeAction}"
+                    ]
+                },
+                {
+                    "name": "ChannelUpDownIntent",
+                    "slots": [
+                        {
+                            "name": "channelAction",
+                            "type": "ChannelAction"
+                        }
+                    ],
+                    "samples": [
+                        "{channelAction} please",
+                        "{channelAction}"
+                    ]
+                },
+                {
+                    "name": "SearchContentIntent",
+                    "slots": [
+                        {
+                            "name": "searchString",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "search for {searchString}"
+                    ]
+                },
+                {
+                    "name": "PlayIntent",
+                    "slots": [
+                        {
+                            "name": "playAction",
+                            "type": "playAction"
+                        }
+                    ],
+                    "samples": [
+                        "{playAction} device",
+                        "{playAction} "
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "ChannelAction",
+                    "values": [
+                        {
+                            "id": "down",
+                            "name": {
+                                "value": "channel down"
+                            }
+                        },
+                        {
+                            "id": "up",
+                            "name": {
+                                "value": "channel up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "STBAction",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "turn off"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "turn on"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "playAction",
+                    "values": [
+                        {
+                            "id": "3",
+                            "name": {
+                                "value": "pause"
+                            }
+                        },
+                        {
+                            "id": "2",
+                            "name": {
+                                "value": "resume"
+                            }
+                        },
+                        {
+                            "id": "1",
+                            "name": {
+                                "value": "stop"
+                            }
+                        },
+                        {
+                            "id": "0",
+                            "name": {
+                                "value": "play"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "volumeAction",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "mute"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "volume down"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "volume up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "videoAction",
+                    "values": [
+                        {
+                            "id": "next",
+                            "name": {
+                                "value": "next video"
+                            }
+                        },
+                        {
+                            "id": "previous",
+                            "name": {
+                                "value": "previous video"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
